@@ -1,5 +1,5 @@
-import user from './user.json';
-import User from './components/User/User';
+import profile from './user.json';
+import Profile from './components/Profile/Profile';
 
 import friends from './friends.json';
 import FriendList from './components/Friends/FriendList';
@@ -12,11 +12,11 @@ import TransactionHistory from './components/Transaction/Transaction';
 
 
 export default function App() {
-  const {avatar, name, tag, location, stats} = user;
+  const {avatar, name, tag, location, stats} = profile;
  
   return(
     <> 
-   <User 
+   <Profile
 avatar={avatar} 
 name={name}
 tag={tag}
@@ -27,7 +27,7 @@ statsLikes={stats.likes}
   /> 
    
 <FriendList 
-items={friends} 
+friendListItems={friends} 
 
 />
 
